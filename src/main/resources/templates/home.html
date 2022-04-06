@@ -1,13 +1,34 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<link rel="icon" href="/images/favicon.png" />
 <head>
-    <title> Spring Boot </title>
-    <link rel="stylesheet" href="/css/styles.css"/>
+    <title> Home </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-<h3> HOME PAGE </h3>
-<p>
-    <a href="/login">Login</a> or create one <a href="/user/list">User management</a>
+
+<div class="text-center">
+    <img th:src="@{/images/poseidon_logo.jpg}" class="img-fluid mx-auto" alt="Responsive image" >
+</div>
+<br>
+<h3 class="text-center"> Welcome on Poseidon </h3>
+<h3 class="text-center" th:text="${userInfo}"></h3>
+<br>
+<h5 class="text-center" sec:authorize="hasRole('ROLE_ADMIN')"> You you are logged in as: <b class="text-success">ADMIN</b></h5>
+<h5 class="text-center" sec:authorize="hasRole('ROLE_USER')"> You you are logged in as: <b class="text-success">USER</b></h5>
+
+<br>
+
+<div class="d-flex align-items-center justify-content-center">
+    <form th:action="@{/logout}" method="POST">
+        <button type="submit" class="btn btn-link">login</button>
+    </form>
+    <form th:action="@{/user/list}" method="GET">
+        or create one<button type="submit" class="btn btn-link">User management</button>
+    </form>
+</div>
 </p>
 </body>
 </html>

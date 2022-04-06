@@ -3,20 +3,22 @@ package com.nnk.springboot.controllers;
 import com.nnk.springboot.domain.RuleName;
 import com.nnk.springboot.domain.Trade;
 import com.nnk.springboot.repositories.TradeRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
 @Controller
+@SessionAttributes("userInfo")
 public class TradeController {
-    // TODO: Inject Trade service
+    // TODO: Inject Trade service -> CHECK
+
+    private static final Logger logger = LogManager.getLogger("TradeController");
 
     @Autowired
     TradeRepository tradeRepository;
@@ -24,54 +26,57 @@ public class TradeController {
     @RequestMapping("/trade/list")
     public String home(Model model)
     {
-        // TODO: find all Trade, add to model
         model.addAttribute("trades", tradeRepository.findAll());
+        logger.info("New request: show all trades in the view ");
         return "trade/list";
     }
 
     @GetMapping("/trade/add")
     public String addUser(Trade bid) {
+        logger.info("New request: show form to add new trade in the view ");
         return "trade/add";
     }
 
     @PostMapping("/trade/validate")
     public String validate(@Valid Trade trade, BindingResult result, Model model) {
-        // TODO: check data valid and save to db, after saving return Trade list
         if(!result.hasErrors()){
             tradeRepository.save(trade);
             model.addAttribute("trades",tradeRepository.findAll());
+            logger.info("New request: trade added in db ");
             return "redirect:/trade/list";
         }
+        logger.error("An error occurred during new trade recording ");
         return "trade/add";
     }
 
     @GetMapping("/trade/update/{id}")
     public String showUpdateForm(@PathVariable("id") Integer id, Model model) {
-        // TODO: get Trade by Id and to model then show to the form
         Trade trade = tradeRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid trade Id:" + id));
         model.addAttribute("trade", trade);
+        logger.info("New request: show form to update trade in the view ");
         return "trade/update";
     }
 
     @PostMapping("/trade/update/{id}")
     public String updateTrade(@PathVariable("id") Integer id, @Valid Trade trade,
                              BindingResult result, Model model) {
-        // TODO: check required fields, if valid call service to update Trade and return Trade list
         if(result.hasErrors()){
+            logger.error("An error occurred during trade updating ");
             return "trade/update";
         }
         trade.setTradeId(id);
         tradeRepository.save(trade);
         model.addAttribute("trades", tradeRepository.findAll());
+        logger.info("New request: trade with id " +id+ " updated in db");
         return "redirect:/trade/list";
     }
 
     @GetMapping("/trade/delete/{id}")
     public String deleteTrade(@PathVariable("id") Integer id, Model model) {
-        // TODO: Find Trade by Id and delete the Trade, return to Trade list
         Trade trade = tradeRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid trade Id:" + id));
         tradeRepository.delete(trade);
         model.addAttribute("trades",tradeRepository.findAll());
+        logger.info("New request: trade with id " +id+ " deleted from db");
         return "redirect:/trade/list";
     }
 }

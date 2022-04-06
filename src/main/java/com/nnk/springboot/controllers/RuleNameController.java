@@ -9,14 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
 @Controller
+@SessionAttributes("userInfo")
 public class RuleNameController {
     // TODO: Inject RuleName service  ->CHECK
 
@@ -29,11 +27,14 @@ public class RuleNameController {
     public String home(Model model)
     {
         model.addAttribute("ruleNames", ruleNameRepository.findAll());
+        logger.info("New request: show all rules in the view ");
         return "ruleName/list";
     }
 
     @GetMapping("/ruleName/add")
     public String addRuleForm(RuleName bid) {
+
+        logger.info("New request: show form to add new rules in the view ");
         return "ruleName/add";
     }
 
@@ -42,8 +43,10 @@ public class RuleNameController {
         if(!result.hasErrors()){
             ruleNameRepository.save(ruleName);
             model.addAttribute("ruleName",ruleNameRepository.findAll());
+            logger.info("New request: rule added in db ");
             return "redirect:/ruleName/list";
         }
+        logger.error("An error occurred during new rule recording ");
         return "ruleName/add";
     }
 
@@ -51,6 +54,7 @@ public class RuleNameController {
     public String showUpdateForm(@PathVariable("id") Integer id, Model model) {
         RuleName ruleName = ruleNameRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid rule Id:" + id));
         model.addAttribute("ruleName", ruleName);
+        logger.info("New request: show form to update rule in the view ");
         return "ruleName/update";
     }
 
@@ -58,11 +62,13 @@ public class RuleNameController {
     public String updateRuleName(@PathVariable("id") Integer id, @Valid RuleName ruleName,
                              BindingResult result, Model model) {
         if(result.hasErrors()){
+            logger.error("An error occurred during rule updating ");
             return "ruleName/update";
         }
         ruleName.setId(id);
         ruleNameRepository.save(ruleName);
         model.addAttribute("ruleNames", ruleNameRepository.findAll());
+        logger.info("New request: rule with id " +id+ " updated in db");
         return "redirect:/ruleName/list";
     }
 
@@ -71,6 +77,7 @@ public class RuleNameController {
         RuleName ruleName = ruleNameRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid rule Id:" + id));
         ruleNameRepository.delete(ruleName);
         model.addAttribute("ruleNames",ruleNameRepository.findAll());
+        logger.info("New request: rule with id " +id+ " deleted from db");
         return "redirect:/ruleName/list";
     }
 }

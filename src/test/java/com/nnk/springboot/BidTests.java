@@ -21,7 +21,7 @@ public class BidTests {
 
 	@Test
 	public void bidListTest() {
-		BidList bid = new BidList("Account Test", "Type Test", 10d);
+		BidList bid = new BidList("Account Test", "Type Test", 10);
 
 		// Save
 		bid = bidListRepository.save(bid);
@@ -43,4 +43,5 @@ public class BidTests {
 		Optional<BidList> bidList = bidListRepository.findById(id);
 		Assert.assertFalse(bidList.isPresent());
 	}
+
 }

@@ -3,6 +3,7 @@ package com.nnk.springboot.domain;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.sql.Timestamp;
@@ -17,9 +18,17 @@ public class Rating {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "moodys_rating")
+    @NotBlank(message = "Moody's rating is mandatory")
     private String moodysRating;
+    @Column(name = "sandP_rating")
+    @NotBlank(message = "SandP rating is mandatory")
     private String sandPRating;
+    @Column(name = "fitch_rating")
+    @NotBlank(message = "Fitch rating is mandatory")
     private String fitchRating;
+    @Column(name = "order_number")
+    @Min(value = 0, message = "Order Number have to be higher or equals to 0 ")
     private int orderNumber;
 
     public Rating(String moodysRating, String sandPRating, String fitchRating, int orderNumber) {
