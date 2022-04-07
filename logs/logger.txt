@@ -1,0 +1,93 @@
+2022-04-07 08:48:22.550  INFO 4668 --- [main] com.nnk.springboot.CurvePointTests       : Starting CurvePointTests using Java 11.0.8-internal on Clem-PC with PID 4668 (started by Clem in C:\Users\Clem\Documents\OpenClassRooms\Projets OpenClassRooms\Projet 7\Poseiden-skeleton)
+2022-04-07 08:48:22.561  INFO 4668 --- [main] com.nnk.springboot.CurvePointTests       : No active profile set, falling back to default profiles: default
+2022-04-07 08:48:34.592  INFO 4668 --- [main] com.nnk.springboot.CurvePointTests       : Started CurvePointTests in 12.544 seconds (JVM running for 16.515)
+2022-04-07 08:48:36.643  INFO 4668 --- [main] c.n.s.ControllerIT.TradeControllerIT     : Starting TradeControllerIT using Java 11.0.8-internal on Clem-PC with PID 4668 (started by Clem in C:\Users\Clem\Documents\OpenClassRooms\Projets OpenClassRooms\Projet 7\Poseiden-skeleton)
+2022-04-07 08:48:36.674  INFO 4668 --- [main] c.n.s.ControllerIT.TradeControllerIT     : No active profile set, falling back to default profiles: default
+2022-04-07 08:48:40.486  INFO 4668 --- [main] c.n.s.ControllerIT.TradeControllerIT     : Started TradeControllerIT in 4.058 seconds (JVM running for 22.409)
+2022-04-07 08:48:40.681 ERROR 4668 --- [main] TradeController                          : An error occurred during trade updating 
+2022-04-07 08:48:41.285 ERROR 4668 --- [main] TradeController                          : An error occurred during new trade recording 
+2022-04-07 08:48:41.481 ERROR 4668 --- [main] RatingController                         : An error occurred during new rating recording 
+2022-04-07 08:48:41.571 ERROR 4668 --- [main] RatingController                         : An error occurred during rating updating 
+2022-04-07 08:48:41.819 ERROR 4668 --- [main] RuleNameController                       : An error occurred during rule updating 
+2022-04-07 08:48:41.902 ERROR 4668 --- [main] RuleNameController                       : An error occurred during new rule recording 
+2022-04-07 08:48:42.057 ERROR 4668 --- [main] CurveController                          : An error occurred during new curve recording 
+2022-04-07 08:48:42.088 ERROR 4668 --- [main] CurveController                          : An error occurred during curve updating 
+2022-04-07 08:48:42.263 ERROR 4668 --- [main] RegistrationController                   : An error occurred during user registration: Username already used
+2022-04-07 08:48:42.392 ERROR 4668 --- [main] BidListController                        : An error occurred during bid updating 
+2022-04-07 08:48:42.478 ERROR 4668 --- [main] BidListController                        : An error occurred during new bid recording 
+2022-04-07 08:48:42.555 ERROR 4668 --- [main] UserController                           : An error occurred during user updating 
+2022-04-07 08:48:42.715 ERROR 4668 --- [main] UserController                           : An error occurred during user registration: Username already used
+2022-04-07 08:48:42.968  INFO 4668 --- [main] c.n.s.SpringSecurityAuthenticationTests  : Starting SpringSecurityAuthenticationTests using Java 11.0.8-internal on Clem-PC with PID 4668 (started by Clem in C:\Users\Clem\Documents\OpenClassRooms\Projets OpenClassRooms\Projet 7\Poseiden-skeleton)
+2022-04-07 08:48:42.969  INFO 4668 --- [main] c.n.s.SpringSecurityAuthenticationTests  : No active profile set, falling back to default profiles: default
+2022-04-07 08:48:45.160  INFO 4668 --- [main] c.n.s.SpringSecurityAuthenticationTests  : Started SpringSecurityAuthenticationTests in 2.244 seconds (JVM running for 27.083)
+2022-04-07 08:50:35.097  INFO 6668 --- [main] com.nnk.springboot.CurvePointTests       : Starting CurvePointTests using Java 11.0.8-internal on Clem-PC with PID 6668 (started by Clem in C:\Users\Clem\Documents\OpenClassRooms\Projets OpenClassRooms\Projet 7\Poseiden-skeleton)
+2022-04-07 08:50:35.099  INFO 6668 --- [main] com.nnk.springboot.CurvePointTests       : No active profile set, falling back to default profiles: default
+2022-04-07 08:50:41.050  INFO 6668 --- [main] com.nnk.springboot.CurvePointTests       : Started CurvePointTests in 6.313 seconds (JVM running for 9.463)
+2022-04-07 08:50:42.004  INFO 6668 --- [main] c.n.s.ControllerIT.TradeControllerIT     : Starting TradeControllerIT using Java 11.0.8-internal on Clem-PC with PID 6668 (started by Clem in C:\Users\Clem\Documents\OpenClassRooms\Projets OpenClassRooms\Projet 7\Poseiden-skeleton)
+2022-04-07 08:50:42.009  INFO 6668 --- [main] c.n.s.ControllerIT.TradeControllerIT     : No active profile set, falling back to default profiles: default
+2022-04-07 08:50:43.627  INFO 6668 --- [main] c.n.s.ControllerIT.TradeControllerIT     : Started TradeControllerIT in 1.666 seconds (JVM running for 12.04)
+2022-04-07 08:50:43.775 ERROR 6668 --- [main] TradeController                          : An error occurred during trade updating 
+2022-04-07 08:50:44.167 ERROR 6668 --- [main] TradeController                          : An error occurred during new trade recording 
+2022-04-07 08:50:44.404 ERROR 6668 --- [main] RatingController                         : An error occurred during new rating recording 
+2022-04-07 08:50:44.482 ERROR 6668 --- [main] RatingController                         : An error occurred during rating updating 
+2022-04-07 08:50:44.692 ERROR 6668 --- [main] RuleNameController                       : An error occurred during rule updating 
+2022-04-07 08:50:44.762 ERROR 6668 --- [main] RuleNameController                       : An error occurred during new rule recording 
+2022-04-07 08:50:44.909 ERROR 6668 --- [main] CurveController                          : An error occurred during new curve recording 
+2022-04-07 08:50:44.941 ERROR 6668 --- [main] CurveController                          : An error occurred during curve updating 
+2022-04-07 08:50:45.163 ERROR 6668 --- [main] RegistrationController                   : An error occurred during user registration: Username already used
+2022-04-07 08:50:45.302 ERROR 6668 --- [main] BidListController                        : An error occurred during bid updating 
+2022-04-07 08:50:45.384 ERROR 6668 --- [main] BidListController                        : An error occurred during new bid recording 
+2022-04-07 08:50:45.454 ERROR 6668 --- [main] UserController                           : An error occurred during user updating 
+2022-04-07 08:50:45.683 ERROR 6668 --- [main] UserController                           : An error occurred during user registration: Username already used
+2022-04-07 08:50:45.881  INFO 6668 --- [main] c.n.s.SpringSecurityAuthenticationTests  : Starting SpringSecurityAuthenticationTests using Java 11.0.8-internal on Clem-PC with PID 6668 (started by Clem in C:\Users\Clem\Documents\OpenClassRooms\Projets OpenClassRooms\Projet 7\Poseiden-skeleton)
+2022-04-07 08:50:45.882  INFO 6668 --- [main] c.n.s.SpringSecurityAuthenticationTests  : No active profile set, falling back to default profiles: default
+2022-04-07 08:50:47.219  INFO 6668 --- [main] c.n.s.SpringSecurityAuthenticationTests  : Started SpringSecurityAuthenticationTests in 1.372 seconds (JVM running for 15.633)
+2022-04-07 08:52:25.686  INFO 3732 --- [main] com.nnk.springboot.CurvePointTests       : Starting CurvePointTests using Java 11.0.8-internal on Clem-PC with PID 3732 (started by Clem in C:\Users\Clem\Documents\OpenClassRooms\Projets OpenClassRooms\Projet 7\Poseiden-skeleton)
+2022-04-07 08:52:25.687  INFO 3732 --- [main] com.nnk.springboot.CurvePointTests       : No active profile set, falling back to default profiles: default
+2022-04-07 08:52:34.259  INFO 3732 --- [main] com.nnk.springboot.CurvePointTests       : Started CurvePointTests in 8.919 seconds (JVM running for 12.601)
+2022-04-07 08:52:35.404  INFO 3732 --- [main] c.n.s.ControllerIT.TradeControllerIT     : Starting TradeControllerIT using Java 11.0.8-internal on Clem-PC with PID 3732 (started by Clem in C:\Users\Clem\Documents\OpenClassRooms\Projets OpenClassRooms\Projet 7\Poseiden-skeleton)
+2022-04-07 08:52:35.404  INFO 3732 --- [main] c.n.s.ControllerIT.TradeControllerIT     : No active profile set, falling back to default profiles: default
+2022-04-07 08:52:37.166  INFO 3732 --- [main] c.n.s.ControllerIT.TradeControllerIT     : Started TradeControllerIT in 1.824 seconds (JVM running for 15.508)
+2022-04-07 08:52:37.320 ERROR 3732 --- [main] TradeController                          : An error occurred during trade updating 
+2022-04-07 08:52:37.767 ERROR 3732 --- [main] TradeController                          : An error occurred during new trade recording 
+2022-04-07 08:52:37.996 ERROR 3732 --- [main] RatingController                         : An error occurred during new rating recording 
+2022-04-07 08:52:38.051 ERROR 3732 --- [main] RatingController                         : An error occurred during rating updating 
+2022-04-07 08:52:38.179 ERROR 3732 --- [main] RuleNameController                       : An error occurred during rule updating 
+2022-04-07 08:52:38.236 ERROR 3732 --- [main] RuleNameController                       : An error occurred during new rule recording 
+2022-04-07 08:52:38.345 ERROR 3732 --- [main] CurveController                          : An error occurred during new curve recording 
+2022-04-07 08:52:38.365 ERROR 3732 --- [main] CurveController                          : An error occurred during curve updating 
+2022-04-07 08:52:38.523 ERROR 3732 --- [main] RegistrationController                   : An error occurred during user registration: Username already used
+2022-04-07 08:52:38.686 ERROR 3732 --- [main] BidListController                        : An error occurred during bid updating 
+2022-04-07 08:52:38.819 ERROR 3732 --- [main] BidListController                        : An error occurred during new bid recording 
+2022-04-07 08:52:38.917 ERROR 3732 --- [main] UserController                           : An error occurred during user updating 
+2022-04-07 08:52:39.095 ERROR 3732 --- [main] UserController                           : An error occurred during user registration: Username already used
+2022-04-07 08:52:39.349  INFO 3732 --- [main] c.n.s.SpringSecurityAuthenticationTests  : Starting SpringSecurityAuthenticationTests using Java 11.0.8-internal on Clem-PC with PID 3732 (started by Clem in C:\Users\Clem\Documents\OpenClassRooms\Projets OpenClassRooms\Projet 7\Poseiden-skeleton)
+2022-04-07 08:52:39.349  INFO 3732 --- [main] c.n.s.SpringSecurityAuthenticationTests  : No active profile set, falling back to default profiles: default
+2022-04-07 08:52:41.892  INFO 3732 --- [main] c.n.s.SpringSecurityAuthenticationTests  : Started SpringSecurityAuthenticationTests in 2.626 seconds (JVM running for 20.234)
+2022-04-07 08:56:41.750  INFO 7608 --- [main] com.nnk.springboot.CurvePointTests       : Starting CurvePointTests using Java 11.0.8-internal on Clem-PC with PID 7608 (started by Clem in C:\Users\Clem\Documents\OpenClassRooms\Projets OpenClassRooms\Projet 7\Poseiden-skeleton)
+2022-04-07 08:56:41.752  INFO 7608 --- [main] com.nnk.springboot.CurvePointTests       : No active profile set, falling back to default profiles: default
+2022-04-07 08:56:49.683  INFO 7608 --- [main] com.nnk.springboot.CurvePointTests       : Started CurvePointTests in 8.25 seconds (JVM running for 10.53)
+2022-04-07 08:56:50.751  INFO 7608 --- [main] c.n.s.ControllerIT.TradeControllerIT     : Starting TradeControllerIT using Java 11.0.8-internal on Clem-PC with PID 7608 (started by Clem in C:\Users\Clem\Documents\OpenClassRooms\Projets OpenClassRooms\Projet 7\Poseiden-skeleton)
+2022-04-07 08:56:50.751  INFO 7608 --- [main] c.n.s.ControllerIT.TradeControllerIT     : No active profile set, falling back to default profiles: default
+2022-04-07 08:56:52.676  INFO 7608 --- [main] c.n.s.ControllerIT.TradeControllerIT     : Started TradeControllerIT in 1.969 seconds (JVM running for 13.523)
+2022-04-07 08:56:52.808 ERROR 7608 --- [main] TradeController                          : An error occurred during trade updating 
+2022-04-07 08:56:53.292 ERROR 7608 --- [main] TradeController                          : An error occurred during new trade recording 
+2022-04-07 08:56:53.455 ERROR 7608 --- [main] RatingController                         : An error occurred during new rating recording 
+2022-04-07 08:56:53.510 ERROR 7608 --- [main] RatingController                         : An error occurred during rating updating 
+2022-04-07 08:56:53.704 ERROR 7608 --- [main] RuleNameController                       : An error occurred during rule updating 
+2022-04-07 08:56:53.789 ERROR 7608 --- [main] RuleNameController                       : An error occurred during new rule recording 
+2022-04-07 08:56:53.970 ERROR 7608 --- [main] CurveController                          : An error occurred during new curve recording 
+2022-04-07 08:56:54.000 ERROR 7608 --- [main] CurveController                          : An error occurred during curve updating 
+2022-04-07 08:56:54.188 ERROR 7608 --- [main] RegistrationController                   : An error occurred during user registration: Username already used
+2022-04-07 08:56:54.326 ERROR 7608 --- [main] BidListController                        : An error occurred during bid updating 
+2022-04-07 08:56:54.412 ERROR 7608 --- [main] BidListController                        : An error occurred during new bid recording 
+2022-04-07 08:56:54.487 ERROR 7608 --- [main] UserController                           : An error occurred during user updating 
+2022-04-07 08:56:54.666 ERROR 7608 --- [main] UserController                           : An error occurred during user registration: Username already used
+2022-04-07 08:56:54.866  INFO 7608 --- [main] c.n.s.SpringSecurityAuthenticationTests  : Starting SpringSecurityAuthenticationTests using Java 11.0.8-internal on Clem-PC with PID 7608 (started by Clem in C:\Users\Clem\Documents\OpenClassRooms\Projets OpenClassRooms\Projet 7\Poseiden-skeleton)
+2022-04-07 08:56:54.867  INFO 7608 --- [main] c.n.s.SpringSecurityAuthenticationTests  : No active profile set, falling back to default profiles: default
+2022-04-07 08:56:56.552  INFO 7608 --- [main] c.n.s.SpringSecurityAuthenticationTests  : Started SpringSecurityAuthenticationTests in 1.722 seconds (JVM running for 17.398)
+2022-04-07 09:22:41.160  INFO 7284 --- [restartedMain] com.nnk.springboot.Application           : Starting Application using Java 11.0.8-internal on Clem-PC with PID 7284 (C:\Users\Clem\Desktop\Poseiden-skeleton\target\classes started by Clem in C:\Users\Clem\Desktop\Poseiden-skeleton)
+2022-04-07 09:22:41.161  INFO 7284 --- [restartedMain] com.nnk.springboot.Application           : No active profile set, falling back to default profiles: default
+2022-04-07 09:22:42.585  INFO 7284 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-07 09:22:46.922  INFO 7284 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-07 09:22:46.945  INFO 7284 --- [restartedMain] com.nnk.springboot.Application           : Started Application in 6.239 seconds (JVM running for 7.392)
