@@ -1,31 +1,36 @@
-# spring-boot
-## Technical:
+#Poseidon
+
+Poseidon is an application for institutional investors who buy and sell fixed income securities
+This application brings together information from many sources on fixed income securities
+
+## Prerequisites:
 
 1. Framework: Spring Boot v2.0.4
 2. Java 8
 3. Thymeleaf
 4. Bootstrap v.4.3.1
+5. Mysql 8.0.17
 
 
-## Setup with Intellij IDE
-1. Create project from Initializr: File > New > project > Spring Initializr
-2. Add lib repository into pom.xml
-3. Add folders
-    - Source root: src/main/java
-    - View: src/main/resources
-    - Static: src/main/resource/static
-4. Create database with name "demo" as configuration in application.properties
-5. Run sql script to create table doc/DATA.sql
+## Create Database
+1. Download Poseidon project on this repository
+2. Open the application.properties
+3. In the "Datasource configuration" section, enter your Mysql configuration 
+        spring.datasource.username={your username}
+        spring.datasource.password={your passeword}
+4. Run sql script to create table doc/DATA.sql
 
-## Implement a Feature
-1. Create mapping domain class and place in package com.nnk.springboot.domain
-2. Create repository class and place in package com.nnk.springboot.repositories
-3. Create controller class and place in package com.nnk.springboot.controllers
-4. Create view files and place in src/main/resource/templates
+## Running App
 
-## Write Unit Test
-1. Create unit test and place in package com.nnk.springboot in folder test > java
+Post installation of Java, Maven and MySQL, and after creating the database, you will be ready to lauch the application. By default, Poseidon will be stated on port 8080
 
-## Security
-1. Create user service to load user from  database and place in package com.nnk.springboot.services
-2. Add configuration class and place in package com.nnk.springboot.config
+## Use Poseidon
+As we said, the application started on port 8080, so open your favorite web browser, and type "http://localhost:8080/" in the address bar. The anthentification page should show up. To connect to the application, you have to enter an email address, and a password.
+
+You can to Poseidon with your Github account or with a username and a password. By default, all the user password are encoded in the database, here are all the accounts you can use with their password not encrypted :
+
+- Username: user - Password: Passw0rd!
+- Username: admin - Password: Passw0rd!
+
+If you choose to connect with your Github account or with a user account, you will only be able to view and add transaction entities.
+If you choose to connect with an admin account, you will be able to access all the features
