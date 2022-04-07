@@ -15,6 +15,10 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.security.RolesAllowed;
 import javax.validation.Valid;
 
+/**
+ * here is the CRUD for User entities
+ */
+
 @Controller
 @SessionAttributes("userInfo")
 public class UserController {
@@ -24,6 +28,11 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
+    /**
+     * Show the template to list users
+     *
+     * @return the userList template
+     */
     @RequestMapping("/user/list")
     public String home(Model model)
     {
@@ -32,12 +41,24 @@ public class UserController {
         return "user/list";
     }
 
+    /**
+     * Show the template to add new user
+     *
+     * @return the template to add new user
+     */
     @GetMapping("/user/add")
     public String addUser(User user) {
         logger.info("New request: show form to add new user in the view ");
         return "user/add";
     }
 
+    /**
+     * this method allows you to add a new user
+     *
+     * @param user a valid user
+     * @return the template to list user if the user in parameter is valid or
+     * @return the template to add new user if the user as error
+     */
     @PostMapping("/user/validate")
     public String validate(@Valid User user, BindingResult result, Model model) {
         if (userRepository.findByUsername(user.getUsername()) != null){
@@ -57,6 +78,12 @@ public class UserController {
         return "user/add";
     }
 
+    /**
+     * Show the template to update a user
+     *
+     * @param id the id of the user to update
+     * @return the template to update user
+     */
     @GetMapping("/user/update/{id}")
     public String showUpdateForm(@PathVariable("id") Integer id, Model model) {
         User user = userRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
@@ -66,6 +93,13 @@ public class UserController {
         return "user/update";
     }
 
+    /**
+     * this method allows you to update a user
+     *
+     * @param id the id of the user to update
+     * @return the template to list user if the user in parameter is valid or
+     * @return the template to update user if the user as error
+     */
     @PostMapping("/user/update/{id}")
     public String updateUser(@PathVariable("id") Integer id, @Valid User user,
                              BindingResult result, Model model) {
@@ -83,6 +117,12 @@ public class UserController {
         return "redirect:/user/list";
     }
 
+    /**
+     * This method allows you to delete a user
+     *
+     * @param id the id of the user to delete
+     * @return the userList template
+     */
     @GetMapping("/user/delete/{id}")
     public String deleteUser(@PathVariable("id") Integer id, Model model) {
         User user = userRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));

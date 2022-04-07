@@ -14,6 +14,10 @@ import org.thymeleaf.extras.springsecurity5.dialect.SpringSecurityDialect;
 
 import javax.sql.DataSource;
 
+/**
+ * here is the Spring Security configuration
+ */
+
 @Configuration
 @EnableWebSecurity
 public class SecutityConfiguration extends WebSecurityConfigurerAdapter {

@@ -17,6 +17,11 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import java.security.Principal;
 import java.util.Map;
 
+
+/**
+ * here are the methods to recover infos about the logged user
+ */
+
 @Controller
 @SessionAttributes("userInfo")
 public class HomeController
@@ -30,13 +35,12 @@ public class HomeController
 	}
 
 
-	@RequestMapping("/admin/home")
-	public String adminHome(Model model)
-	{
-		logger.info("New request: show admin homepage in the view ");
-		return "redirect:/bidList/list";
-	}
-
+	/**
+	 * Recover infos about the logged user, and put them in the home template
+	 *
+	 * @param user information about the logged user
+	 * @return the home template
+	 */
 	@RequestMapping("/*")
 	public String getUserInfo(Principal user, Model model) {
 		StringBuffer userInfo= new StringBuffer();
@@ -50,6 +54,12 @@ public class HomeController
 		return "home";
 	}
 
+	/**
+	 * Recover infos about the logged user with a token authentication
+	 *
+	 * @param user encrypted information about the logged user
+	 * @return decrypted information about the logged user
+	 */
 	private StringBuffer getOauth2LoginInfo(Principal user){
 		StringBuffer protectedInfo = new StringBuffer();
 		OAuth2AuthenticationToken authToken = ((OAuth2AuthenticationToken) user);
@@ -65,6 +75,13 @@ public class HomeController
 		return protectedInfo;
 	}
 
+
+	/**
+	 * Recover infos about the logged user with a session authentication
+	 *
+	 * @param user encrypted information about the logged user
+	 * @return decrypted information about the logged user
+	 */
 	private StringBuffer getUsernamePasswordLoginInfo(Principal user)
 	{
 		StringBuffer usernameInfo = new StringBuffer();
