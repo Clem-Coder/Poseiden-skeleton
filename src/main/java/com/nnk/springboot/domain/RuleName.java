@@ -1,13 +1,16 @@
 package com.nnk.springboot.domain;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.sql.Timestamp;
 
 @Entity
-@Data
+@Getter
+@Setter
 @Table(name = "rule_name")
 public class RuleName {
     // TODO: Map columns in data table RULENAME with corresponding java fields

@@ -1,6 +1,8 @@
 package com.nnk.springboot.domain;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.DecimalMin;
@@ -10,7 +12,8 @@ import java.util.Date;
 
 
 @Entity
-@Data
+@Getter
+@Setter
 @Table(name = "trade")
 public class Trade {
     // TODO: Map columns in data table TRADE with corresponding java fields

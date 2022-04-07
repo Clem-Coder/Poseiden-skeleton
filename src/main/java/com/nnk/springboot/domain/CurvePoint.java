@@ -1,6 +1,8 @@
 package com.nnk.springboot.domain;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.validator.constraints.Length;
@@ -14,7 +16,8 @@ import java.sql.Timestamp;
 import java.util.Date;
 
 @Entity
-@Data
+@Getter
+@Setter
 @Table(name = "curve_point")
 public class CurvePoint {
     // TODO: Map columns in data table CURVEPOINT with corresponding java fields
