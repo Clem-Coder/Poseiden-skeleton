@@ -1,7 +1,6 @@
 # Poseidon
 
-Poseidon is an application for institutional investors who buy and sell fixed income securities
-This application brings together information from many sources on fixed income securities
+Poseidon is an application for institutional investors who buy and sell fixed income securities. This application brings together information from many sources on fixed income securities
 
 ## Prerequisites:
 
